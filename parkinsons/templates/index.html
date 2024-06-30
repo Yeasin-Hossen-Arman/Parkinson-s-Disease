@@ -1,0 +1,422 @@
+
+{% load static tailwind_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parkinson</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+    {% tailwind_css %}
+
+    
+  
+</head>
+<body>
+
+    
+        <div class="nav">
+            <div class='nav-bar-uper'>
+              <div class="logo">
+                <img src="static/logofinal.png" alt="logo" srcset="" class='logo-img' />
+              </div>
+              <div class="nav-bar-uper-contant">
+                  <h1>Southern University Bangladesh</h1>
+                  <h3>Department of Computer Science & Engineering</h3>
+              </div>
+            </div>
+         
+        </div>
+
+        <div class="heading-section">
+          <h1>Parkinson's Disease Detection</h1>
+        </div>
+
+
+
+
+        {% comment %} <div id="accordionExample">
+            <div
+              class="rounded-t-lg border border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
+              <h2 class="mb-0" id="headingOne">
+                <button
+                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                  type="button"
+                  data-twe-collapse-init
+                  data-twe-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne">
+                  Accordion Item #1
+                  <span
+                    class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="!visible"
+                data-twe-collapse-item
+                data-twe-collapse-show
+                aria-labelledby="headingOne"
+                data-twe-parent="#accordionExample">
+                <div class="px-5 py-4">
+                  <strong>This is the first item's accordion body.</strong> It is
+                  shown by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
+              <h2 class="mb-0" id="headingTwo">
+                <button
+                  class="group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                  type="button"
+                  data-twe-collapse-init
+                  data-twe-collapse-collapsed
+                  data-twe-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo">
+                  Accordion Item #2
+                  <span
+                    class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6 ">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="!visible hidden"
+                data-twe-collapse-item
+                aria-labelledby="headingTwo"
+                data-twe-parent="#accordionExample">
+                <div class="px-5 py-4">
+                  <strong>This is the second item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div> {% endcomment %}
+            {% comment %} <div
+              class="rounded-b-lg border border-t-0 border-neutral-200 bg-white dark:border-neutral-600 dark:bg-body-dark">
+              <h2 class="accordion-header mb-0" id="headingThree">
+                <button
+                  class="data-[twe-collapse-collapsed] group relative flex w-full items-center border-0 bg-white px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none data-[twe-collapse-collapsed]:rounded-b-lg dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-white [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary  dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10"
+                  type="button"
+                  data-twe-collapse-init
+                  data-twe-collapse-collapsed
+                  data-twe-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree">
+                  Accordion Item #3
+                  <span
+                    class="-me-1 ms-auto h-5 w-5 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out group-data-[twe-collapse-collapsed]:me-0 group-data-[twe-collapse-collapsed]:rotate-0 motion-reduce:transition-none [&>svg]:h-6 [&>svg]:w-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </span>
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="!visible hidden"
+                data-twe-collapse-item
+                aria-labelledby="headingThree"
+                data-twe-parent="#accordionExample">
+                <div class="px-5 py-4">
+                  <strong>This is the third item's accordion body.</strong> It is
+                  hidden by default, until the collapse plugin adds the appropriate
+                  classes that we use to style each element. These classes control
+                  the overall appearance, as well as the showing and hiding via CSS
+                  transitions. You can modify any of this with custom CSS or
+                  overriding our default variables. It's also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div> {% endcomment %}
+
+       
+          <div class="num-input-section w-full bg-grey-700">
+
+            <form class="mx-auto py-8" action="">
+
+                <div class="input-entity mx-auto bg-white rounded shadow">
+
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>
+
+                    <div class="input-con mb-4">
+                        <label class="block text-grey-darker text-sm font-bold mb-2">Pregnancies:</label>
+                        <input class=" border rounded w-full py-2 px-3 text-grey-darker" type="text"
+                            name="n1" id="student_id" value="" placeholder="Enter Pregnancies value">
+                 
+                    </div>     
+                </div>
+
+            </form>
+          
+        </div> 
+{% comment %} 
+        <form action="">
+
+            <div class="p-8 flex justify-center items-center min-h-screen bg-white">
+                <div class="w-full md:w-1/2 relative grid grid-cols-1 md:grid-cols-3 border border-gray-300 bg-gray-100 rounded-lg">
+                    <div
+                        class="rounded-l-lg p-4 bg-gray-200 flex flex-col justify-center items-center border-0 border-r border-gray-300 ">
+                        <label class="cursor-pointer hover:opacity-80 inline-flex items-center shadow-md my-2 px-2 py-2 bg-gray-900 text-gray-50 border border-transparent
+                        rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
+                       focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" for="restaurantImage">
+                           
+                    Select image
+                            <input id="restaurantImage" class="text-sm cursor-pointer w-36 hidden" type="file">
+                        </label>
+                       <button
+                    class = 'inline-flex items-center shadow-md my-2 px-2 py-2 bg-gray-900 text-gray-50 border border-transparent
+                        rounded-md font-semibold text-xs uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none 
+                       focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150'>
+                    remove image
+                </button>
+                    </div>
+                    <div 
+                        class="relative order-first md:order-last h-28 md:h-auto flex justify-center items-center border border-dashed border-gray-400 col-span-2 m-2 rounded-lg bg-no-repeat bg-center bg-origin-padding bg-cover">
+                            <span class="text-gray-400 opacity-75">
+                                <svg class="w-14 h-14"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="0.7" stroke="currentColor">
+                             <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                            </svg>
+                            </span>
+                    </div>
+                </div>
+            </div>
+
+
+        </form> {% endcomment %}
+
+
+
+       <form action="">
+        <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 ml-2 sm:col-span-4 md:mr-3">
+            <!-- Photo File Input -->
+            <input type="file" class="hidden" x-ref="photo" x-on:change="
+                                photoName = $refs.photo.files[0].name;
+                                const reader = new FileReader();
+                                reader.onload = (e) => {
+                                    photoPreview = e.target.result;
+                                };
+                                reader.readAsDataURL($refs.photo.files[0]);
+            ">
+        
+            <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="photo">
+                Profile Photo <span class="text-red-600"> </span>
+            </label>
+            
+            <div class="text-center">
+                <!-- Current Profile Photo -->
+                <div class="mt-2" x-show="! photoPreview">
+                    <img src="https://images.unsplash.com/photo-1531316282956-d38457be0993?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" class="w-40 h-40 m-auto rounded-full shadow">
+                </div>
+                <!-- New Profile Photo Preview -->
+                <div class="mt-2" x-show="photoPreview" style="display: none;">
+                    <span class="block w-40 h-40 rounded-full m-auto shadow" x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'" style="background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url('null');">
+                    </span>
+                </div>
+                <button type="button" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-400 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 mt-2 ml-3" x-on:click.prevent="$refs.photo.click()">
+                    Select New Photo
+                </button>
+            </div>
+        </div>
+       </form>
+
+
+
+       <form action="">
+
+        <div class="flex items-center justify-center min-h-screen">
+            <div class="relative flex h-10 w-full min-w-[200px] max-w-[26rem]">
+                <input id="file-upload" type="file" class="peer hidden" required />
+                <label
+                    for="file-upload"
+                    class="absolute right-1 top-1 z-10 select-none rounded bg-red-500 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white transition-all hover:shadow-lg hover:bg-red-600 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85]"
+                >
+                    Upload Files
+                </label>
+                <div class="relative flex-1">
+                    <input
+                        type="text"
+                        class="relative peer h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-red-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+                        placeholder=" "
+                        required
+                    />
+                    <label
+                        class="before:content[' '] after:content[' '] pointer-events-none absolute left-0 -top-1.5 flex h-full w-full select-none text-[11px] font-normal leading-tight text-blue-gray-400 transition-all before:pointer-events-none before:mt-[6.5px] before:mr-1 before:box-border before:block before:h-1.5 before:w-2.5 before:rounded-tl-md before:border-t before:border-l before:border-blue-gray-200 before:transition-all after:pointer-events-none after:mt-[6.5px] after:ml-1 after:box-border after:block after:h-1.5 after:w-2.5 after:flex-grow after:rounded-tr-md after:border-t after:border-r after:border-blue-gray-200 after:transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:leading-[3.75] peer-placeholder-shown:text-blue-gray-500 peer-placeholder-shown:before:border-transparent peer-placeholder-shown:after:border-transparent peer-focus:text-[11px] peer-focus:leading-tight peer-focus:text-red-500 peer-focus:before:border-t-2 peer-focus:before:border-l-2 peer-focus:before:!border-red-500 peer-focus:after:border-t-2 peer-focus:after:border-r-2 peer-focus:after:!border-red-500 peer-disabled:text-transparent peer-disabled:before:border-transparent peer-disabled:after:border-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500"
+                    >
+                        Upload Files
+                    </label>
+                </div>
+            </div>
+        </div>
+       </form>
+
+
+
+
+
+       <footer class="footer footer-center  w-full p-4 bg-gray-300 text-gray-800">
+        <div class="text-center">
+          <p>
+            Copyright © 2024 -
+            <a class="font-semibold" href=""
+              >Yeasin Arman</a
+            >
+          </p>
+        </div>
+      </footer>
+
+        
+
+        
+  
+</body>
+</html>
